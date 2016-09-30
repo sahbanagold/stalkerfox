@@ -6,22 +6,23 @@
   font: 14px "Prompt", sans-serif
 
 html
-  background: $main-color-1
+  background: $main-shade-2
 
 body
   background: transparent
 
 .btn.btn-sfox
-  background: $main-color-2
+  background: $main-color-3
   color: $main-shade-7
   font-weight: bold
 
 .btn.btn-sfox:hover,
 .btn.btn-sfox:focus
-  background: $main-color-3
+  background: $main-color-4
 
 section#lyt-splashscreen,
 section#lyt-signin,
+  background: $main-color-1
   position: fixed
   width: 100%
   height: 100%
@@ -48,3 +49,131 @@ section#lyt-signin
     right: 0px
     bottom: 0px
     width: 250px
+  .misc-link
+    margin-top: 10px
+    a
+      color: $main-shade-1
+
+section#dashboard-content
+  padding: 50px 0px
+  #form-search
+  ul#hunt-list
+    margin: 50px 0px 0px
+    padding: 0px
+    list-style: none
+    > li
+      background: $main-shade-1
+      padding: 15px
+      position: relative
+      .photo, .detail
+        display: inline-block
+        vertical-align: top
+      .photo
+        background: $main-shade-3
+        border: 0px
+        width: 110px
+        height: 110px
+      .detail
+        padding: 10px
+        padding-right: 0px
+        .name
+          color: $main-color-1
+          font-weight: bold
+          margin: 0px
+        .follower
+          color: $main-shade-5
+          font-weight: bold
+      a.mark-trigger
+        background: $main-color-1
+        color: $main-shade-1
+        font-weight: bold
+        padding: 8px 25px
+        position: absolute
+        bottom: 0px
+        right: 0px
+        text-decoration: none
+        +transition(all, ease-in, 0.2s)
+      a.mark-trigger::before
+        content: ""
+        border-left: 37px solid transparent
+        border-bottom: 37px solid $main-color-1
+        position: absolute
+        top: 0px
+        left: -37px
+      a.mark-trigger:hover,
+      a.mark-trigger:focus
+        padding-right: 35px
+    > li:nth-child(n+2)
+      margin-top: 20px
+    > li::after
+      +clear-both
+
+
+section#dashboard-menu-trigger
+  background: $main-color-1
+  border-top-left-radius: 100%
+  border-top-right-radius: 100%
+  margin: 0px auto
+  text-align: center
+  position: fixed
+  left: 0px
+  right: 0px
+  bottom: 0px
+  width: 150px
+  z-index: 100000000000
+  a
+    cursor: pointer
+    display: block
+    padding: 20px
+    +transition(all, ease-in, 0.2s)
+  a:hover, a:focus
+    padding-bottom: 30px
+  .logo
+    margin-top: -60px
+    width: 80%
+
+section#dashboard-menu
+  ul.menu-list
+    list-style: none
+    margin: 0px auto
+    padding: 0px
+    width: 70%
+    li
+      a
+        border-radius: 5px
+        display: block
+        font-size: 17px
+        font-weight: bold
+        letter-spacing: 1px
+        text-decoration: none !important
+        text-align: center
+    li.type-1
+      a
+        background: $main-color-1
+        color: $main-shade-1
+        padding: 20px
+      a:hover, a:focus
+        background: $main-color-2
+    li.type-2
+      a
+        background: $main-color-3
+        color: $main-shade-7
+        padding: 10px
+      a:hover, a:focus
+        background: $main-color-4
+    li:nth-child(n+2)
+      margin-top: 15px
+  .modal-dialog
+    margin: 0px auto
+    .modal-content
+      background: transparent
+      box-shadow: none
+      border: 0px
+      border-radius: 0px
+  > .wrapper-outer
+    display: table
+    width: 100%
+    height: 100%
+    > .wrapper-inner
+      display: table-cell
+      vertical-align: middle

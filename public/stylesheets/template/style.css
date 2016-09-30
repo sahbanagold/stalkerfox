@@ -11,7 +11,7 @@ a {
 
 .form-control {
   box-shadow: none !important;
-  border-color: #EF5A28 !important; }
+  border: none; }
 
 .btn {
   outline: none !important; }
@@ -30,7 +30,7 @@ img {
   font: 14px "Prompt", sans-serif; }
 
 html {
-  background: #EF5A28; }
+  background: #FAFAFA; }
 
 body {
   background: transparent; }
@@ -46,6 +46,7 @@ body {
 
 section#lyt-splashscreen,
 section#lyt-signin {
+  background: #EF5A28;
   position: fixed;
   width: 100%;
   height: 100%; }
@@ -73,5 +74,139 @@ section#lyt-signin .logo {
   right: 0px;
   bottom: 0px;
   width: 250px; }
+
+section#lyt-signin .misc-link {
+  margin-top: 10px; }
+  section#lyt-signin .misc-link a {
+    color: #FFFFFF; }
+
+section#dashboard-content {
+  padding: 50px 0px; }
+  section#dashboard-content ul#hunt-list {
+    margin: 50px 0px 0px;
+    padding: 0px;
+    list-style: none; }
+    section#dashboard-content ul#hunt-list > li {
+      background: #FFFFFF;
+      padding: 15px;
+      position: relative; }
+      section#dashboard-content ul#hunt-list > li .photo, section#dashboard-content ul#hunt-list > li .detail {
+        display: inline-block;
+        vertical-align: top; }
+      section#dashboard-content ul#hunt-list > li .photo {
+        background: #F0F0F0;
+        border: 0px;
+        width: 110px;
+        height: 110px; }
+      section#dashboard-content ul#hunt-list > li .detail {
+        padding: 10px;
+        padding-right: 0px; }
+        section#dashboard-content ul#hunt-list > li .detail .name {
+          color: #EF5A28;
+          font-weight: bold;
+          margin: 0px; }
+        section#dashboard-content ul#hunt-list > li .detail .follower {
+          color: #AAAAAA;
+          font-weight: bold; }
+      section#dashboard-content ul#hunt-list > li a.mark-trigger {
+        background: #EF5A28;
+        color: #FFFFFF;
+        font-weight: bold;
+        padding: 8px 25px;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        text-decoration: none;
+        -moz-transition: all ease-in 0.2s;
+        -o-transition: all ease-in 0.2s;
+        -webkit-transition: all ease-in 0.2s;
+        transition: all ease-in 0.2s; }
+      section#dashboard-content ul#hunt-list > li a.mark-trigger::before {
+        content: "";
+        border-left: 37px solid transparent;
+        border-bottom: 37px solid #EF5A28;
+        position: absolute;
+        top: 0px;
+        left: -37px; }
+      section#dashboard-content ul#hunt-list > li a.mark-trigger:hover,
+      section#dashboard-content ul#hunt-list > li a.mark-trigger:focus {
+        padding-right: 35px; }
+    section#dashboard-content ul#hunt-list > li:nth-child(n+2) {
+      margin-top: 20px; }
+    section#dashboard-content ul#hunt-list > li::after {
+      clear: both;
+      content: " ";
+      display: block;
+      height: 0px; }
+
+section#dashboard-menu-trigger {
+  background: #EF5A28;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  margin: 0px auto;
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 150px;
+  z-index: 100000000000; }
+  section#dashboard-menu-trigger a {
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+    -moz-transition: all ease-in 0.2s;
+    -o-transition: all ease-in 0.2s;
+    -webkit-transition: all ease-in 0.2s;
+    transition: all ease-in 0.2s; }
+  section#dashboard-menu-trigger a:hover, section#dashboard-menu-trigger a:focus {
+    padding-bottom: 30px; }
+  section#dashboard-menu-trigger .logo {
+    margin-top: -60px;
+    width: 80%; }
+
+section#dashboard-menu ul.menu-list {
+  list-style: none;
+  margin: 0px auto;
+  padding: 0px;
+  width: 70%; }
+  section#dashboard-menu ul.menu-list li a {
+    border-radius: 5px;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    text-align: center; }
+  section#dashboard-menu ul.menu-list li.type-1 a {
+    background: #EF5A28;
+    color: #FFFFFF;
+    padding: 20px; }
+  section#dashboard-menu ul.menu-list li.type-1 a:hover, section#dashboard-menu ul.menu-list li.type-1 a:focus {
+    background: #EF4A28; }
+  section#dashboard-menu ul.menu-list li.type-2 a {
+    background: #FFFF00;
+    color: #000000;
+    padding: 10px; }
+  section#dashboard-menu ul.menu-list li.type-2 a:hover, section#dashboard-menu ul.menu-list li.type-2 a:focus {
+    background: #FFDF00; }
+  section#dashboard-menu ul.menu-list li:nth-child(n+2) {
+    margin-top: 15px; }
+
+section#dashboard-menu .modal-dialog {
+  margin: 0px auto; }
+  section#dashboard-menu .modal-dialog .modal-content {
+    background: transparent;
+    box-shadow: none;
+    border: 0px;
+    border-radius: 0px; }
+
+section#dashboard-menu > .wrapper-outer {
+  display: table;
+  width: 100%;
+  height: 100%; }
+  section#dashboard-menu > .wrapper-outer > .wrapper-inner {
+    display: table-cell;
+    vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */
