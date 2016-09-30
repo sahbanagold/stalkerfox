@@ -1,0 +1,77 @@
+html, body, ul, ol {
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  cursor: pointer;
+  outline: none !important; }
+
+.input-group-addon {
+  border-color: #EF5A28 !important; }
+
+.form-control {
+  box-shadow: none !important;
+  border-color: #EF5A28 !important; }
+
+.btn {
+  outline: none !important; }
+
+img {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none; }
+
+* {
+  font: 14px "Prompt", sans-serif; }
+
+html {
+  background: #EF5A28; }
+
+body {
+  background: transparent; }
+
+.btn.btn-sfox {
+  background: #FFFF00;
+  color: #000000;
+  font-weight: bold; }
+
+.btn.btn-sfox:hover,
+.btn.btn-sfox:focus {
+  background: #FFDF00; }
+
+section#lyt-splashscreen,
+section#lyt-signin {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+  section#lyt-splashscreen > .wrapper-outer,
+  section#lyt-signin > .wrapper-outer {
+    display: table;
+    width: 100%;
+    height: 100%; }
+    section#lyt-splashscreen > .wrapper-outer > .wrapper-inner,
+    section#lyt-signin > .wrapper-outer > .wrapper-inner {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+
+section#lyt-splashscreen .logo {
+  height: 200px; }
+
+section#lyt-signin h1, section#lyt-signin h2, section#lyt-signin h3, section#lyt-signin h4, section#lyt-signin h5, section#lyt-signin h6, section#lyt-signin span, section#lyt-signin p {
+  color: #FFFFFF; }
+
+section#lyt-signin .logo {
+  margin: 0px auto;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 250px; }
+
+/*# sourceMappingURL=style.css.map */

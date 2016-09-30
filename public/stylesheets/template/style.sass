@@ -1,0 +1,50 @@
+@import mixin
+@import variable
+@import reset
+
+*
+  font: 14px "Prompt", sans-serif
+
+html
+  background: $main-color-1
+
+body
+  background: transparent
+
+.btn.btn-sfox
+  background: $main-color-2
+  color: $main-shade-7
+  font-weight: bold
+
+.btn.btn-sfox:hover,
+.btn.btn-sfox:focus
+  background: $main-color-3
+
+section#lyt-splashscreen,
+section#lyt-signin,
+  position: fixed
+  width: 100%
+  height: 100%
+  > .wrapper-outer
+    display: table
+    width: 100%
+    height: 100%
+    > .wrapper-inner
+      display: table-cell
+      vertical-align: middle
+      text-align: center
+
+section#lyt-splashscreen
+  .logo
+    height: 200px
+
+section#lyt-signin
+  h1, h2, h3, h4, h5, h6, span, p
+    color: $main-shade-1
+  .logo
+    margin: 0px auto
+    position: absolute
+    left: 0px
+    right: 0px
+    bottom: 0px
+    width: 250px

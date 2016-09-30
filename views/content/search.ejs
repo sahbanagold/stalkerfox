@@ -21,7 +21,18 @@
       <% } %>
     </table>
   </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <% for (var i = 0; i < users.length; i++) { %>
+          <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <a href="https://twitter.com/<%= users[i].screen_name %>">
+                <img src=<%= users[i].profile_image_url.replace(/_normal/gi,"") %> alt="">
+              </a>
 
+<<<<<<< HEAD
 location
 statuses_count:
 statuses_per_day
@@ -31,6 +42,32 @@ address
 photo
 tweet interests
 geographic location
+
+=======
+              <div class="caption">
+                <h4 class="pull-right">name : <%= users[i].screen_name %></h4>
+                <h4 class="pull-right">screen name : <%= users[i].name %></h4>
+                <h4 class="pull-right">status : <%= users[i].status %></h4>
+              </div>
+              <div class="ratings">
+                <p class="pull-right"><%= users[i].followers_count %> followers</p>
+                <p>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                </p>
+              </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      </div>
+    </div>
+  </div>
+<script src="js/jquery.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
 
 Sample JSON:
 { id: 107137730,
