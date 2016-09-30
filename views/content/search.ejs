@@ -1,0 +1,91 @@
+<% include ../header %>
+
+  <section>
+    <h1>Search All Twitter</h1>
+
+    <form method="get" action="stalker/search">
+      <div class="form-group">
+        <input name="search" type="text" class="form-control">
+      </div>
+      <button type="button" class="btn btn-success">Search</button>
+    </form>
+
+    <table>
+      <tr>
+        <th>Screen Name</th>
+      </tr>
+      <% for (var i = 0; i < users.length; i++) { %>
+      <tr>
+        <td><%= users[i].screen_name %></td>
+      </tr>
+      <% } %>
+    </table>
+  </section>
+
+Sample JSON:
+{ id: 107137730,
+    id_str: '107137730',
+    name: 'FairTest',
+    screen_name: 'FairTestOffice',
+    location: 'Boston, MA',
+    description: 'Working to end the misuses and flaws of standardized testing and to ensure that evaluation is fair, open, valid and educationally beneficial.',
+    url: 'http://t.co/5GrLxv4Q1J',
+    entities: { url: [Object], description: [Object] },
+    protected: false,
+    followers_count: 4594,
+    friends_count: 30,
+    listed_count: 209,
+    created_at: 'Thu Jan 21 17:15:42 +0000 2010',
+    favourites_count: 12,
+    utc_offset: -14400,
+    time_zone: 'Eastern Time (US & Canada)',
+    geo_enabled: false,
+    verified: false,
+    statuses_count: 931,
+    lang: 'en',
+    status:
+     { created_at: 'Tue Sep 27 18:20:51 +0000 2016',
+       id: 780834603963650000,
+       id_str: '780834603963650048',
+       text: 'Topping this week\'s news: more jurisdictions roll back graduation exams, another state\'s computer testing system... https://t.co/4ytISR0L80',
+       truncated: false,
+       entities: [Object],
+       source: '<a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a>',
+       in_reply_to_status_id: null,
+       in_reply_to_status_id_str: null,
+       in_reply_to_user_id: null,
+       in_reply_to_user_id_str: null,
+       in_reply_to_screen_name: null,
+       geo: null,
+       coordinates: null,
+       place: null,
+       contributors: null,
+       is_quote_status: false,
+       retweet_count: 0,
+       favorite_count: 0,
+       favorited: false,
+       retweeted: false,
+       possibly_sensitive: false,
+       lang: 'en' },
+    contributors_enabled: false,
+    is_translator: false,
+    is_translation_enabled: false,
+    profile_background_color: 'C0DEED',
+    profile_background_image_url: 'http://pbs.twimg.com/profile_background_images/736237977/6f00f329545d333d82c62db16411a8bf.jpeg',
+    profile_background_image_url_https: 'https://pbs.twimg.com/profile_background_images/736237977/6f00f329545d333d82c62db16411a8bf.jpeg',
+    profile_background_tile: true,
+    profile_image_url: 'http://pbs.twimg.com/profile_images/646250595/online-logo_normal.jpg',
+    profile_image_url_https: 'https://pbs.twimg.com/profile_images/646250595/online-logo_normal.jpg',
+    profile_link_color: '0084B4',
+    profile_sidebar_border_color: 'FFFFFF',
+    profile_sidebar_fill_color: 'DDEEF6',
+    profile_text_color: '333333',
+    profile_use_background_image: true,
+    has_extended_profile: false,
+    default_profile: false,
+    default_profile_image: false,
+    following: false,
+    follow_request_sent: false,
+    notifications: false }
+
+<% include ../footer %>
