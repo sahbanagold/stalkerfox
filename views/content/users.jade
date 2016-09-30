@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    .container
+      .row
+        nav.navbar.navbar-default
+          .nav.nav-justified.navbar-nav
+            form.navbar-form.navbar-search(role='search',action='/twit',method='post')
+              .input-group
+                input.form-control(type='text',name='username')
+                .input-group-btn
+                  button.btn.btn-primary.btn-search(type='submit')
+                    | Search User Name
+    .container
+      .row
+        .col-md-9
+          .row
+            each user, i in users
+              .col-sm-4.col-lg-4.col-md-4
+                .thumbnail
+                  a(href='https://twitter.com/'+`${user.screen_name}`)
+                    img(src=`${user.profile_image_url.replace(/_normal/gi,"")}`, alt='')
+                  .caption
+                    h4.pull-right name : #{user.name}
+                    h4.pull-right screen name : #{user.screen_name}
+                    console.log(user.status)
+                    //h4.pull-right status : #{user.status.text}
+                  .ratings
+                    p.pull-right #{user.followers_count} followers
+                    p
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+    // /.container
+    .container
+      hr
+      // Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright © Your Website 2014
+    // /.container
+
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='../public/js/bootstrap.min.js')
