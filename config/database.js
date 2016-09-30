@@ -1,4 +1,3 @@
 module.exports = {
-
-    'url' : 'mongodb://localhost/passport'
+  'url' : 'mongodb://localhost/test'
 };
