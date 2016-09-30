@@ -17,9 +17,15 @@ CRUD page for twitter screen names
 router.get('/search', function(req, res, next) {
   if (req.query.search) {
     client.get('users/search', {
-      q: req.query.search
+      q: req.query.search,
+      count: 1000,
+      page:1
     }, function(error, users, response) {
       if (!error) {
+        //users = JSON.parse(users)
+        users.sort(function (vala,valb) {
+          return valb.followers_count - vala.followers_count
+        })
         res.render('content/search', {
           users: users
         });
