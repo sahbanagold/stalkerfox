@@ -2,16 +2,16 @@
 <% include component_menu %>
 <section id="dashboard-content" class="container">
   <div class="row"><div class="col-sm-6 col-sm-offset-3">
-    <form id="form-search" action="/template/hunt" method="POST">
-      <input id="txt-search-bar" type="text" class="form-control input-lg" placeholder="type the victim name">
+    <form id="form-search" action="/search" method="GET">
+      <input id="txt-search-bar" name="q" type="text" class="form-control input-lg" placeholder="type the victim name" autocomplete="off">
     </form>
     <ul id="hunt-list">
-      <% for(var idx = 0; idx < 5; idx++){ %>
+      <% for (var i = 0; i < users.length; i++) { %>
       <li>
-        <img class="photo" />
+        <img class="photo" src="<%= users[i].profile_image_url.replace(/_normal/gi,"") %>" />
         <div class="detail">
-          <h3 class="name">John Doe</h3>
-          <span class="follower">1000 followers</span>
+          <h3 class="name"><%= users[i].screen_name %></h3>
+          <span class="follower"><%= users[i].followers_count %> followers</span>
         </div>
         <a href="" class="mark-trigger">MARK</a>
       </li>

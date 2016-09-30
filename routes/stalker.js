@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/stalkerfox');
+
+mongoose.createConnection('mongodb://localhost/stalkerfox');
 
 var Twitter = require('twitter');
 var client = new Twitter({
