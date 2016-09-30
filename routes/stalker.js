@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/stalkerfox');
+
 var Twitter = require('twitter');
 var client = new Twitter({
   consumer_key: 'DAiENeEGNQDB4tEu324uPkri0',
@@ -8,6 +11,8 @@ var client = new Twitter({
   access_token_key: '781716847532109824-PkMnL6wzAFzBRwXsz6WE0dOQ0aVlSqS',
   access_token_secret: 'bD7sv7kgyhpC1AFs5hWU6KUU4dnxXIUyIhjmEuGrNizGO'
 });
+
+
 
 /* ====================================================
 CRUD page for twitter screen names
